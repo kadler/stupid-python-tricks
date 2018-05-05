@@ -25,7 +25,7 @@ msg.attach(MIMEText('Your code has bugs. Logs attached.'))
 for arg in argv[1:]:
     with open(arg) as file:
         part = MIMEApplication(file.read())
-        part['Content-Disposition'] = 'attachment; filename="{}"'.format(basename(arg))
+        part['Content-Disposition'] = f'attachment; filename="{basename(arg)}"'
         msg.attach(part)
 
 smtp.send_message(msg)

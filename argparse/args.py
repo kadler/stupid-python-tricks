@@ -20,11 +20,10 @@ cmd = {
     'restart': 'STRTCPSVR',
 }[args.action]
 
-cl = "{} SERVER(*HTTP) HTTPSVR({})" \
-         .format(cmd, args.server)
+cl = f"{cmd} SERVER(*HTTP) HTTPSVR({args.server})"
 if args.action == 'restart':
     cl += ' RESTART(*HTTP)'
 
 print(cl)
-system('system "{}"'.format(cl))
+system(f'system "{cl}"')
 

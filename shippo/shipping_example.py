@@ -39,7 +39,4 @@ shipment = shippo.Shipment.create(
 )
 
 for rate in shipment.rates:
-    print("{} {}: ${}".format(
-        rate["provider"],  
-        rate["servicelevel"]["name"],
-        rate["amount"]))
+    print(f'{rate["provider"]} {rate["servicelevel"]["name"]}: ${rate["amount"]}')

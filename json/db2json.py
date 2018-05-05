@@ -11,5 +11,4 @@ cur.execute(query)
 
 for row in cur:
     obj = json.loads(row[0])
-    print("{o[name]}: {o[limit]}".format(o=obj))
-
+    print(f'{obj["name"]}: {obj["limit"]}')
