@@ -13,9 +13,9 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
 api = tweepy.API(auth)
-results = api.search("@OCEANUserGroup")
+results = api.search("#PowerUP18")
 
 for result in results[:5]:
-    print('@' + result.user.screen_name)
+    print('@' + result.user.screen_name + ':')
     print(result.text)
     print()
