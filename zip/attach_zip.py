@@ -27,7 +27,7 @@ msg.attach(MIMEText('Your code has bugs. Logs attached.'))
 zipbuf = BytesIO()
 with ZipFile(zipbuf, 'w') as myzip:
     for arg in argv[1:]:
-        myzip.write(arg)
+        myzip.write(arg, basename(arg))
 
 # Go to the beginning of the buffer
 zipbuf.seek(0);
