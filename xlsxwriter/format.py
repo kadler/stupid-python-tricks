@@ -21,7 +21,7 @@ with Workbook('qcustcdt_format.xlsx') as workbook:
                                      'value': 'C2*0.5',
                                      'format': red_fmt})
 
-    ws.set_column(0, len(headers)-1, 16)
+    ws.set_column(0, len(headers)-1, 20)
 
     ws.write_row('A1', headers, hdr_fmt)
     ws.set_row(0, 22)
