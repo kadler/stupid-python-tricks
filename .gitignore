@@ -1,1 +1,4 @@
-test.sh
+config.py
+__pycache__
+*.xlsx
+.~lock*
